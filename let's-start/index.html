@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+    .nice-view {
+        color: red;
+    }
+</style>
+
 <body>
     <h1>learning to connect the js file with html</h1>
 
@@ -18,10 +24,53 @@
         <li>fourth list</li>
     </ul>
 
-    <h3>Number 1 way</h3>
+    <h3>Persones</h3>
     <!-- <script src="connect.js"> </script> -->
 
-    <h3>Number 2 way</h3>
+    <section>
+        <ul>
+            <li>Jalal</li>
+            <li>Jalali</li>
+            <li>Jalalian</li>
+            <li>Jalalianay</li>
+            <li>Jalalianayai</li>
+        </ul>
+    </section>
+
+    <h3 id="fruit-title">Fruits</h3>
+
+    <section>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Angor</li>
+        </ul>
+    </section>
+
+    <h3>Place I like visit</h3>
+
+    <section>
+        <ul>
+            <li class="nice-view">Bandorbon</li>
+            <li class="nice-view">Bandoribon</li>
+            <li class="nice-view">Bandobibon</li>
+            <li>Bandorbon</li>
+            <li>Bandorbon</li>
+        </ul>
+    </section>
+
+    <section>
+        <ul id="bons" class="bongolo">
+            <li>shandor bon1</li>
+            <li>shandor bon2</li>
+            <li>shandor bon3</li>
+            <li>shandor bon4</li>
+            <li>shandor bon5</li>
+        </ul>
+    </section>
+
+
     <script>
         // console.log('connected js file')
 
@@ -31,7 +80,62 @@
             // console.log(li.innerText);
             console.log(li.innerHTML);
         }
+        console.log(document.getElementById("fruit-title"));
+
+
+        let title = document.getElementById('fruit-title');
+        title.innerText = "Fruit title changed by js";
+
+
+
+        const place = document.getElementsByClassName('nice-view')
+        for (const key of place) {
+            console.log(key);
+            console.log(key.innerText);
+        }
+
+
+
+        console.log(document.getElementById('bons')); // id use korle -- full html teg ta dibe.
+        console.log(document.getElementsByClassName('bongolo')); // id use korle -- array er motho kore dibe.
+
+
+
+
+
+        // ----------------------- querySelectorAll ---------------
+
+        console.log(document.querySelectorAll('section ul .nice-view')); // css er motho call korle othoba jokhon arow beshi alada korar poyojon hobe tokon 'querySelector' use korbo
+        console.log(document.querySelectorAll('#bons li'));
+
+
+
+
+        // ----------------------- querySelectorAll ---------------
+
+        console.log(document.querySelector('.bongolo li')); // just fist element ta dibe
+
+
+
+
     </script>
+
+
+
+
+    <h1>Five procces to get js from html</h1>
+
+    <ol style="list-style: 1;">
+        <li>getElementsByTagName</li>
+        <li>getElementById</li>
+        <li>getElementsByClassName</li>
+        <li>querySelectorAll</li>
+        <li>querySelector</li>
+    </ol>
+
+
+
+
 
 </body>
 
