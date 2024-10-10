@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>learning to connect the js file with html</h1>
+
+    <ul>
+        <li>first list</li>
+        <li>second list</li>
+        <li>third list</li>
+        <li>fourth list</li>
+    </ul>
+
+    <h3>Number 1 way</h3>
+    <!-- <script src="connect.js"> </script> -->
+
+    <h3>Number 2 way</h3>
+    <script>
+        // console.log('connected js file')
+
+        const listFind = document.getElementsByTagName('li')
+        for (const li of listFind) {
+            // console.log(li);
+            // console.log(li.innerText);
+            console.log(li.innerHTML);
+        }
+    </script>
+
+</body>
+
+</html>
