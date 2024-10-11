@@ -48,9 +48,10 @@
         </ul>
     </section>
 
-    <h3>Place I like visit</h3>
+    <h3 id="onek-class" class="class1 class2 class3 class4">Place I like visit</h3>
 
-    <section>
+    <section class="chg-attr">
+        <h4>Hi, let's check. I am changing Attribute.</h4>
         <ul>
             <li class="nice-view">Bandorbon</li>
             <li class="nice-view">Bandoribon</li>
@@ -69,6 +70,7 @@
             <li>shandor bon5</li>
         </ul>
     </section>
+
 
 
     <script>
@@ -117,10 +119,41 @@
 
 
 
+        // get more classes
+
+        // let moreclasses = document.getElementsByClassName('class1');
+        let moreClasses = document.getElementById('onek-class');
+        console.log(moreClasses);
+
+        // moreClasses.getAttribute("class"); // facing problem
+        let moreCls = moreClasses.getAttribute("class");
+        console.log(moreCls); // solved
+
+        moreClasses.classList.add('class5'); // to add class
+        moreCls = moreClasses.getAttribute('class')
+        console.log(moreCls);
+
+        moreClasses.classList.remove("class2"); // to remove class
+        moreCls = moreClasses.getAttribute('class');
+        console.log(moreCls);
+
+
+        // set Attribute 
+
+        moreClasses.setAttribute('title', 'tooltip set by js.mouse hover korle show korbe');
+        console.log('mouse hover korle show korbe')
+
+
+
+        // change getAttribute
+
+        // let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = 'changed'
+        let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = '<h2>changed</h2>';
+        console.log(changeAtt)
+
+
 
     </script>
-
-
 
 
     <h1>Five procces to get js from html</h1>
@@ -134,6 +167,49 @@
     </ol>
 
 
+    <!-- styleIn.js file started -->
+
+    <section id="nirdisto">
+        <ul>
+            <li>Jalal</li>
+            <li>Jalali</li>
+            <li>Jalalian</li>
+            <li>Jalalianay</li>
+            <li>Jalalianayai</li>
+        </ul>
+    </section>
+
+    <!-- style ta css file e kore , js dhara jsut file ta add kore dile same style ta pabe -->
+    <section id="let-anything" class="somthing">
+        <ul>
+            <li>Jalal</li>
+            <li>Jalali</li>
+            <li>Jalalian</li>
+            <li>Jalalianay</li>
+            <li>Jalalianayai</li>
+        </ul>
+    </section>
+
+    <!-- styleIn.js file upper -->
+    <script src="../styleIn.js"> </script>
+
+
+
+
+    <!-- sibling-and-others -->
+
+    <section id="anything" class="some">
+        <ul>
+            <li>Jalal</li>
+            <li>Jalali</li>
+            <li>Jalalian</li>
+            <li>Jalalianay</li>
+            <li>Jalalianayai</li>
+        </ul>
+    </section>
+
+
+    <script src="../sibling-and-others.js"> </script>
 
 
 
