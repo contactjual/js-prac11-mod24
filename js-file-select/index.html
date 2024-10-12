@@ -15,203 +15,221 @@
 </style>
 
 <body>
-    <h1>learning to connect the js file with html</h1>
+    <main>
+        <h1>learning to connect the js file with html</h1>
 
-    <ul>
-        <li>first list</li>
-        <li>second list</li>
-        <li>third list</li>
-        <li>fourth list</li>
-    </ul>
-
-    <h3>Persones</h3>
-    <!-- <script src="connect.js"> </script> -->
-
-    <section>
         <ul>
-            <li>Jalal</li>
-            <li>Jalali</li>
-            <li>Jalalian</li>
-            <li>Jalalianay</li>
-            <li>Jalalianayai</li>
+            <li>first list</li>
+            <li>second list</li>
+            <li>third list</li>
+            <li>fourth list</li>
         </ul>
-    </section>
 
-    <h3 id="fruit-title">Fruits</h3>
+        <h3>Persones</h3>
+        <!-- <script src="connect.js"> </script> -->
 
-    <section>
-        <ul>
-            <li>Apple</li>
-            <li>Banana</li>
-            <li>Carrot</li>
-            <li>Angor</li>
-        </ul>
-    </section>
+        <section>
+            <ul>
+                <li>Jalal</li>
+                <li>Jalali</li>
+                <li>Jalalian</li>
+                <li>Jalalianay</li>
+                <li>Jalalianayai</li>
+            </ul>
+        </section>
 
-    <h3 id="onek-class" class="class1 class2 class3 class4">Place I like visit</h3>
+        <h3 id="fruit-title">Fruits</h3>
 
-    <section class="chg-attr">
-        <h4>Hi, let's check. I am changing Attribute.</h4>
-        <ul>
-            <li class="nice-view">Bandorbon</li>
-            <li class="nice-view">Bandoribon</li>
-            <li class="nice-view">Bandobibon</li>
-            <li>Bandorbon</li>
-            <li>Bandorbon</li>
-        </ul>
-    </section>
+        <section>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+                <li>Angor</li>
+            </ul>
+        </section>
 
-    <section>
-        <ul id="bons" class="bongolo">
-            <li>shandor bon1</li>
-            <li>shandor bon2</li>
-            <li>shandor bon3</li>
-            <li>shandor bon4</li>
-            <li>shandor bon5</li>
-        </ul>
-    </section>
+        <h3 id="onek-class" class="class1 class2 class3 class4">Place I like visit</h3>
 
+        <section class="chg-attr">
+            <h4>Hi, let's check. I am changing Attribute.</h4>
+            <ul>
+                <li class="nice-view">Bandorbon</li>
+                <li class="nice-view">Bandoribon</li>
+                <li class="nice-view">Bandobibon</li>
+                <li>Bandorbon</li>
+                <li>Bandorbon</li>
+            </ul>
+        </section>
 
-
-    <script>
-        // console.log('connected js file')
-
-        const listFind = document.getElementsByTagName('li')
-        for (const li of listFind) {
-            // console.log(li);
-            // console.log(li.innerText);
-            console.log(li.innerHTML);
-        }
-        console.log(document.getElementById("fruit-title"));
-
-
-        let title = document.getElementById('fruit-title');
-        title.innerText = "Fruit title changed by js";
+        <section>
+            <ul id="bons" class="bongolo">
+                <li>shandor bon1</li>
+                <li>shandor bon2</li>
+                <li>shandor bon3</li>
+                <li>shandor bon4</li>
+                <li>shandor bon5</li>
+            </ul>
+        </section>
 
 
 
-        const place = document.getElementsByClassName('nice-view')
-        for (const key of place) {
-            console.log(key);
-            console.log(key.innerText);
-        }
+        <script>
+            // console.log('connected js file')
+
+            const listFind = document.getElementsByTagName('li')
+            for (const li of listFind) {
+                // console.log(li);
+                // console.log(li.innerText);
+                console.log(li.innerHTML);
+            }
+            console.log(document.getElementById("fruit-title"));
+
+
+            let title = document.getElementById('fruit-title');
+            title.innerText = "Fruit title changed by js";
 
 
 
-        console.log(document.getElementById('bons')); // id use korle -- full html teg ta dibe.
-        console.log(document.getElementsByClassName('bongolo')); // id use korle -- array er motho kore dibe.
+            const place = document.getElementsByClassName('nice-view')
+            for (const key of place) {
+                console.log(key);
+                console.log(key.innerText);
+            }
 
 
 
-
-
-        // ----------------------- querySelectorAll ---------------
-
-        console.log(document.querySelectorAll('section ul .nice-view')); // css er motho call korle othoba jokhon arow beshi alada korar poyojon hobe tokon 'querySelector' use korbo
-        console.log(document.querySelectorAll('#bons li'));
-
-
-
-
-        // ----------------------- querySelectorAll ---------------
-
-        console.log(document.querySelector('.bongolo li')); // just fist element ta dibe
-
-
-
-        // get more classes
-
-        // let moreclasses = document.getElementsByClassName('class1');
-        let moreClasses = document.getElementById('onek-class');
-        console.log(moreClasses);
-
-        // moreClasses.getAttribute("class"); // facing problem
-        let moreCls = moreClasses.getAttribute("class");
-        console.log(moreCls); // solved
-
-        moreClasses.classList.add('class5'); // to add class
-        moreCls = moreClasses.getAttribute('class')
-        console.log(moreCls);
-
-        moreClasses.classList.remove("class2"); // to remove class
-        moreCls = moreClasses.getAttribute('class');
-        console.log(moreCls);
-
-
-        // set Attribute 
-
-        moreClasses.setAttribute('title', 'tooltip set by js.mouse hover korle show korbe');
-        console.log('mouse hover korle show korbe')
-
-
-
-        // change getAttribute
-
-        // let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = 'changed'
-        let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = '<h2>changed</h2>';
-        console.log(changeAtt)
-
-
-
-    </script>
-
-
-    <h1>Five procces to get js from html</h1>
-
-    <ol style="list-style: 1;">
-        <li>getElementsByTagName</li>
-        <li>getElementById</li>
-        <li>getElementsByClassName</li>
-        <li>querySelectorAll</li>
-        <li>querySelector</li>
-    </ol>
-
-
-    <!-- styleIn.js file started -->
-
-    <section id="nirdisto">
-        <ul>
-            <li>Jalal</li>
-            <li>Jalali</li>
-            <li>Jalalian</li>
-            <li>Jalalianay</li>
-            <li>Jalalianayai</li>
-        </ul>
-    </section>
-
-    <!-- style ta css file e kore , js dhara jsut file ta add kore dile same style ta pabe -->
-    <section id="let-anything" class="somthing">
-        <ul>
-            <li>Jalal</li>
-            <li>Jalali</li>
-            <li>Jalalian</li>
-            <li>Jalalianay</li>
-            <li>Jalalianayai</li>
-        </ul>
-    </section>
-
-    <!-- styleIn.js file upper -->
-    <script src="../styleIn.js"> </script>
+            console.log(document.getElementById('bons')); // id use korle -- full html teg ta dibe.
+            console.log(document.getElementsByClassName('bongolo')); // id use korle -- array er motho kore dibe.
 
 
 
 
-    <!-- sibling-and-others -->
 
-    <section id="anything" class="some">
-        <ul>
-            <li>Jalal</li>
-            <li>Jalali</li>
-            <li>Jalalian</li>
-            <li>Jalalianay</li>
-            <li>Jalalianayai</li>
-        </ul>
-    </section>
+            // ----------------------- querySelectorAll ---------------
+
+            console.log(document.querySelectorAll('section ul .nice-view')); // css er motho call korle othoba jokhon arow beshi alada korar poyojon hobe tokon 'querySelector' use korbo
+            console.log(document.querySelectorAll('#bons li'));
 
 
-    <script src="../sibling-and-others.js"> </script>
 
 
+            // ----------------------- querySelectorAll ---------------
+
+            console.log(document.querySelector('.bongolo li')); // just fist element ta dibe
+
+
+
+            // get more classes
+
+            // let moreclasses = document.getElementsByClassName('class1');
+            let moreClasses = document.getElementById('onek-class');
+            console.log(moreClasses);
+
+            // moreClasses.getAttribute("class"); // facing problem
+            let moreCls = moreClasses.getAttribute("class");
+            console.log(moreCls); // solved
+
+            moreClasses.classList.add('class5'); // to add class
+            moreCls = moreClasses.getAttribute('class')
+            console.log(moreCls);
+
+            moreClasses.classList.remove("class2"); // to remove class
+            moreCls = moreClasses.getAttribute('class');
+            console.log(moreCls);
+
+
+            // set Attribute 
+
+            moreClasses.setAttribute('title', 'tooltip set by js.mouse hover korle show korbe');
+            console.log('mouse hover korle show korbe')
+
+
+
+            // change getAttribute
+
+            // let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = 'changed'
+            let changeAtt = document.getElementsByClassName("chg-attr")[0].innerText = '<h2>changed</h2>';
+            console.log(changeAtt)
+
+
+
+        </script>
+
+
+        <h1>Five procces to get js from html</h1>
+
+        <ol style="list-style: 1;">
+            <li>getElementsByTagName</li>
+            <li>getElementById</li>
+            <li>getElementsByClassName</li>
+            <li>querySelectorAll</li>
+            <li>querySelector</li>
+        </ol>
+
+
+
+        <!-- styleIn.js file started -->
+        <section id="nirdisto">
+            <ul>
+                <li>Jalal</li>
+                <li>Jalali</li>
+                <li>Jalalian</li>
+                <li>Jalalianay</li>
+                <li>Jalalianayai</li>
+            </ul>
+        </section>
+
+        <!-- style ta css file e kore , js dhara jsut file ta add kore dile same style ta pabe -->
+        <section id="let-anything" class="somthing">
+            <ul>
+                <li>Jalal</li>
+                <li>Jalali</li>
+                <li>Jalalian</li>
+                <li>Jalalianay</li>
+                <li>Jalalianayai</li>
+            </ul>
+        </section>
+
+        <script src="../styleIn.js"> </script>
+        <!-- styleIn.js file upper -->
+
+
+
+
+        <!-- child-parent-append -->
+        <section id="anything" class="some">
+            <ul>
+                <li>Jalal</li>
+                <li>Jalali</li>
+                <li>Jalalian</li>
+                <li>Jalalianay</li>
+                <li>Jalalianayai</li>
+            </ul>
+        </section>
+
+        <script src="../sibling-and-others.js"> </script>
+        <!-- child-parent-append js file upper -->
+
+
+
+
+        <!-- append js file -->
+        <h2>Append.js file. The various bons</h2>
+        <section>
+            <ul id="nice-bons">
+                <li>shalbon</li>
+                <li>kachabon</li>
+                <li>naibon</li>
+                <li>kewbon</li>
+                <li>jongolbon</li>
+            </ul>
+        </section>
+
+
+        <script src="../append.js"></script>
+        <!-- append js file upper -->
+    </main>
 
 </body>
 

@@ -1,4 +1,7 @@
 
+
+// child, parent
+
 const idAnithig = document.getElementById('anything');
 
 console.log(idAnithig)
