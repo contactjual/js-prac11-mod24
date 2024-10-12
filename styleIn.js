@@ -1,5 +1,7 @@
 
-const sectionsStyle = document.querySelectorAll('section')
+const sectionsStyle = document.querySelectorAll('section')  // shob section pabe
+// const sectionsStyle = document.querySelector('section')  // shudo 1st section section pabe
+
 // console.log(sectionsStyle)
 
 for(const section of sectionsStyle){
