@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final events</title>
+</head>
+<body>
+    <h1>final dom events handles</h1>
+    <h2 id="handler-status">Default Text</h2>
+    <p id="input-text">Default Input text</p>
+
+    <input type="text" id="input-field">
+    <button id="btn-update">Update</button>
+
+    <button onclick="handleOncllick1()">Handle Events by Add onclick function</button>
+    <button id="events-lisenter">Handle Events by addEventsListener</button>
+    <script>
+
+        // process1
+        function handleOncllick1 (){
+            const changeText = document.getElementById('handler-status');
+            changeText.innerText = 'Handle by function attached on onclick attribute';
+        }
+
+        // process2
+        document.getElementById('events-lisenter').addEventListener('click', function(){
+            const handlerStataus = document.getElementById('handler-status');
+            handlerStataus.innerText='text udated by addEventListener button'
+        })
+
+
+        // process2 reused
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text');
+            p.innerText = inputText;
+        })
+
+    </script>
+</body>
+</html>
